@@ -6,7 +6,7 @@
 
 - NPM 9.6.1
 - Vite 4.1.4
--VUE 3.2.47
+- VUE 3.2.47
 
 ### Instalação - WINDOWS
 ```sh
