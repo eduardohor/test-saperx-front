@@ -7,14 +7,12 @@
 				<div class="container-fluid py-5">
 					<h1 class="display-5 fw-bold">Meus Contatos</h1>
 					<p class="col-md-8 fs-4">Olá, aqui estão seus contatos, clique no botão abaixo para adicionar mais.</p>
-					<button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#adicionarContato">Adicionar</button>
+					<router-link to="/create" class="btn btn-primary btn-lg" type="button">Adicionar</router-link>
 				</div>
 			</div>
-			
-			<Form idName="adicionarContato"></Form>
 
-			<div class="row align-items-md-stretch">
-				<div v-for="contact of contacts" :key="contact.id" class="col-md-6">
+			<div class="row align-items-md-stretcfa-flip-horizontal">
+				<div v-for="contact of contacts" :key="contact.id" class="col-md-6 mt-2">
 					<div class="h-80 p-5 bg-light border rounded-3">
 						<div>
 							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -40,31 +38,27 @@
 
 <script>
 import Header from '../components/Header.vue'
-import Form from '../components/Form.vue'
 import { axiosInstance } from '../services/http'
 
 export default {
-	components:{
-		Header,
-		Form
+	components: {
+		Header
 	},
-  data() {
-    return {
-      contacts: [],
-      url: `${import.meta.env.VITE_API_URL_IMG}`
-    }
-  },
+	data() {
+		return {
+			contacts: [],
+			url: `${import.meta.env.VITE_API_URL_IMG}`
+		}
+	},
 
-  async created() {
-    try {
-      const { data } = await axiosInstance.get('/contacts');
-      this.contacts = data
-    } catch (error) {
-      console.log(error)
-    }
+	async created() {
+		try {
+			const { data } = await axiosInstance.get('/contacts');
+			this.contacts = data
+		} catch (error) {
+			console.log(error)
+		}
 
-  }
+	}
 }
-
-
 </script>
