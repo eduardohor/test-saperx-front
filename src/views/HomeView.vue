@@ -1,4 +1,3 @@
-
 <template>
 	<main>
 		<div class="container py-4">
@@ -26,7 +25,8 @@
 							<h2>{{ contact.name }}</h2>
 						</div>
 						<p>{{ contact.telephone }}</p>
-						<button class="btn btn-outline-secondary" type="button">Detalhes</button>
+						<router-link :to="{ name: 'details', params: { id: contact.id } }" class="btn btn-outline-secondary">Detalhes
+							&raquo;</router-link>
 					</div>
 				</div>
 			</div>
