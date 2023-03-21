@@ -1,29 +1,32 @@
-# test-saperx-front
+# TESTE PARA VAGA DE DESENVOLVEDOR BACK-END
 
-This template should help get you started developing with Vue 3 in Vite.
+### Front-end feito com Vuejs
 
-## Recommended IDE Setup
+### Arquitetura 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- NPM 9.6.1
+- Vite 4.1.4
+-VUE 3.2.47
 
-## Customize configuration
+### Instalação - WINDOWS
+```sh
+git clone https://github.com/eduardohor/test-saperx-front.git
+```
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```sh
+cd test-saperx-front
+```
 
-## Project Setup
-
+- Instalar as dependências
 ```sh
 npm install
 ```
+- Em um editor verifique a variável 'VITE_API_URL_BASE' contido no arquivo **.env.development** e adicione o uri da api do back-end. Exemplo = VITE_API_URL_BASE=http://localhost:8000/api/
 
-### Compile and Hot-Reload for Development
+- Subir a aplicação
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+Verificar se a aplicação está online acessando [http://localhost:5173](http://localhost:5173)
